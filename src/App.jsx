@@ -7,6 +7,7 @@ const App = () => {
   const audioRef = useRef(null);
   const [hasPlayed, setHasPlayed] = useState(false);
 
+
   // Function to try and play the audio
   const tryPlayAudio = () => {
     if (!hasPlayed && audioRef.current) {
@@ -54,11 +55,12 @@ const App = () => {
           <div className="fuego"></div>
         </div>
         <svg
+        className="sca scale-150"
           id="cake"
           version="1.1"
           x="0px"
           y="0px"
-          width="200px"
+          width="300px"
           height="500px"
           viewBox="0 0 200 500"
           enableBackground="new 0 0 200 500"
@@ -281,9 +283,9 @@ c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.54
                     "
             />
           </path>
-          <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
+          <rect x="25" y="475.571" fill="#fefae9" width="150" height="4" />
         </svg>
-        <div className="text">
+        <div className="text mt-[7rem]">
           <h1>
             Happy 20<sup>th</sup> Birthday!
           </h1>
@@ -293,7 +295,7 @@ c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.54
 
         <div className="">
           <audio ref={audioRef} className="hidden" autoPlay loop>
-            <source src="../src/assets/birthday.mp3"  type="audio/mp3" />
+            {/* <source src="../src/assets/birthday.mp3"  type="audio/mp3" /> */}
           </audio>
         </div>
       </div>
