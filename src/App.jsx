@@ -295,7 +295,7 @@ c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.54
 
         <div className="">
           <audio ref={audioRef} className="hidden" autoPlay loop>
-            {/* <source src="../src/assets/birthday.mp3"  type="audio/mp3" /> */}
+            <source src="../src/assets/birthday.mp3"  type="audio/mp3" />
           </audio>
         </div>
       </div>
