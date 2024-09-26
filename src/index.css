@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 html,
 body {
   width: 100%;
@@ -24,11 +25,55 @@ body {
 /* ============================================== Candle
 */
 
+.name{
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3d5af1;
+}
+
+.name:before, .name:after {
+  display: block;
+  content: attr(data-name);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+.name:after {
+  color: #f0f;
+  z-index: -2;
+}
+.name:before {
+  color: #0ff;
+  z-index: -1;
+}
+.name:hover:before {
+  -webkit-animation: name 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+          animation: name 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+}
+.name:hover:after {
+  animation: name 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+}
+
+
+.title,p{
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #a6fff2;
+
+}
+
+
 .velas {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  top: 237px;
+  top: 176px;
   left: 50%;
   margin-left: -2.4px;
   margin-top: -8.33333333px;
@@ -106,7 +151,7 @@ body {
 }
 
 .text {
-  color: #8b6a60;
+  color: #B3B3B3;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-style:italic;
@@ -115,3 +160,4 @@ body {
     font-size: 1.4em;
   }
 }  
+

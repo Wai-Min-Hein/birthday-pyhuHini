@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import BirthdayCanvas from "./BirthdatCanvas";
+import { ReactTyped } from "react-typed";
 
 const App = () => {
   const audioRef = useRef(null);
@@ -55,7 +56,7 @@ const App = () => {
           <div className="fuego"></div>
         </div>
         <svg
-        className="sca scale-150"
+        className="scale-110 "
           id="cake"
           version="1.1"
           x="0px"
@@ -285,12 +286,16 @@ c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.54
           </path>
           <rect x="25" y="475.571" fill="#fefae9" width="150" height="4" />
         </svg>
-        <div className="text mt-[7rem]">
+        <div className="text mt-[2rem]">
           <h1>
-            Happy 20<sup>th</sup> Birthday!
+
+          <ReactTyped className="title text-2xl"  strings={['Happy 20<sup>th</sup> Birthday!','I pray that you get everything ','you want this year and beyond.','May this year be filled with endless joy!','Wishing you the happiest 20th birthday']} typeSpeed={60} backSpeed={80} loop />
           </h1>
-          <p>Phyu Hnin Phwae</p>
-          <p>27/10/2024</p>
+
+
+          <ReactTyped className="name text-3xl" data-name='Phyu Hnin Phwae' strings={['Phyu Hnin Phwae']} typeSpeed={80} showCursor={false} startDelay={1000} />
+
+          <p className="text-xl">27/9/2024</p>
         </div>
 
         <div className="">
@@ -298,6 +303,9 @@ c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.54
             <source src="/assets/birthday.mp3"  type="audio/mp3" />
           </audio>
         </div>
+
+       
+        
       </div>
       <BirthdayCanvas/>
     </main>
